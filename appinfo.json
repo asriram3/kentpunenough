@@ -3,9 +3,9 @@
     "capabilities": [
         ""
     ],
-    "companyName": "aditsri@gmail.com",
-    "longName": "KentPunEnough",
-    "projectType": "simplyjs",
+    "companyName": "Pebble",
+    "longName": "Pebble.js Tutorial 1-2",
+    "projectType": "pebblejs",
     "resources": {
         "media": [
             {
@@ -20,17 +20,24 @@
                 "type": "png"
             },
             {
+                "file": "images/tile_splash.png",
+                "name": "IMAGE_TILE_SPLASH",
+                "type": "png"
+            },
+            {
                 "file": "fonts/UbuntuMono-Regular.ttf",
                 "name": "MONO_FONT_14",
                 "type": "font"
             }
         ]
     },
-    "shortName": "KentPunEnough",
-    "uuid": "39a70db8-25c3-4565-99a0-55a2574b217b",
+    "sdkVersion": "3",
+    "shortName": "P.js Tut 1-2",
+    "uuid": "2dcd536c-3749-4fbc-a881-6ee69ab6c27f",
     "versionCode": 1,
     "versionLabel": "1.0",
     "watchapp": {
+        "hiddenApp": false,
         "watchface": false
     }
 }
