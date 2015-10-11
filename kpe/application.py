@@ -13,7 +13,7 @@ api = twitter.Api(consumer_key=CONSUMER_KEY,
 
 application = Flask(__name__)
 
-@app.route('/')
+@application.route('/')
 def home():
     search = api.GetSearch(term="%23kentpunenough", lang='en', result_type='recent', count=100, max_id='')
     tweets = []
