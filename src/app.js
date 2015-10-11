@@ -1,23 +1,22 @@
-console.log('Simply.js demo!');
-
-simply.on('singleClick', function(e) {
-  console.log(util2.format('single clicked $button!', e));
-  simply.subtitle('Pressed ' + e.button + '!');
-});
-
-simply.on('longClick', function(e) {
-  console.log(util2.format('long clicked $button!', e));
-  simply.vibe();
-  simply.scrollable(e.button !== 'select');
-});
-
-simply.on('accelTap', function(e) {
-  console.log(util2.format('tapped accel axis $axis $direction!', e));
-  simply.subtitle('Tapped ' + (e.direction > 0 ? '+' : '-') + e.axis + '!');
-});
-
-simply.text({
-  title: 'Simply Demo!',
-  body: 'This is a demo. Press buttons or tap the watch!',
-}, true);
-
+var encodedAuth = 'MmR6ZkpsdlJOdndvRzFkcGdpejBxczl0WTpqb0NQN29Ua2xBdUVzd29jRGwwMTJTTzAxVUxybE1LRVVBMlZvNVZLYjJ1RHRRazc1TQ==';
+//var URL = 'https://api.twitter.com/1.1/search/tweets.json?q=#kenthackenough';
+var URL = 'https://api.twitter.com/oauth2/token';
+//var ajax = require('ajax');
+//var token;
+ajax(
+		{
+			url: URL,
+			type: 'json',
+      method: 'post',
+			headers: { 'Authorization' : encodedAuth,
+      'Content-Type' : 'application/x-www-form-urlencoded;charset=UTF-8',
+                'Content-Length': 29,
+                'Accept-Encoding':'gzip'},
+      data: 'grant_type=client_credentials'
+		},
+		function(data) {
+			//console.log(data);
+      console.log('success');
+    },function(error) {
+      console.log("error");
+    });
